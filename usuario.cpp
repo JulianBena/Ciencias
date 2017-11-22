@@ -6,9 +6,9 @@ using namespace std;
 struct Usuario{ 
 	string nombre;
 	string apellido;
-	string Documento;
+	string Documento; //deje documento como string porque tengo entendido que aunque sean numeros, si no se hacen operaciones alegraicas o algo asi con eso es mejor que quede string. 
 	string sexo;
-	int edad;
+	int edad; //este en int porque depronto necesitemos hacer unos rangos parta mirar si son niÃ±os o adultos
 	Usuario *sig;
 };
 class ListaUsuarios{
@@ -26,7 +26,7 @@ ListaUsuarios::ListaUsuarios(){
 
 void ListaUsuarios::registrarse(){
 	//tengo esta duda: Yo quiero guardar los datos en las variables de la structura, 
-	//pero no sé como, aquí está creando nuevas variables . 
+	//pero no sÃ© como, aquÃ­ estÃ¡ creando nuevas variables . 
 	
 	ofstream archivo ("archivo_usuario.txt");
 	string nombre, apellido, documento, sexo; 
@@ -34,7 +34,7 @@ void ListaUsuarios::registrarse(){
 	do{
 		cout << "1. -Nuevo registro\n2.-Salir\n";
 		cin >> op; 
-		cin.ignore(); //la función cin.ignore() para que no se tome en cuenta el último enter registrado
+		cin.ignore(); //la funciÃ³n cin.ignore() para que no se tome en cuenta el Ãºltimo enter registrado
 		if(op==1) { 
 			if(!archivo.is_open()){ 
 				archivo.open("archivo_usuario.txt", ios::out); //abriendo el archivo
