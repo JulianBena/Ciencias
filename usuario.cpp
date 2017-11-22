@@ -6,7 +6,7 @@ using namespace std;
 struct Usuario{ 
 	string nombre;
 	string apellido;
-	string Documento; //deje documento como string porque tengo entendido que aunque sean numeros, si no se hacen operaciones alegraicas o algo asi con eso es mejor que quede string. 
+	string documento; //deje documento como string porque tengo entendido que aunque sean numeros, si no se hacen operaciones alegraicas o algo asi con eso es mejor que quede string. 
 	string sexo;
 	int edad; //este en int porque depronto necesitemos hacer unos rangos parta mirar si son niños o adultos
 	Usuario *sig;
